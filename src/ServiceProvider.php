@@ -1,6 +1,6 @@
 <?php
 
-namespace Ismail1k\LaravelCart;
+namespace Ismail1k\ServiceProvider;
 
 use Illuminate\Support\ServiceProvider as Provider;
 
