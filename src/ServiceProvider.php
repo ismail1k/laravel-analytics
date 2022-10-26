@@ -1,6 +1,6 @@
 <?php
 
-namespace Ismail1k\ServiceProvider;
+namespace Ismail1k\LaravelStatistics;
 
 use Illuminate\Support\ServiceProvider as Provider;
 
