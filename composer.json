@@ -1,0 +1,21 @@
+{
+    "name": "ismail1k/laravel-statistics",
+    "description": "The package can help you collect statistics about your Laravel project.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ismail1k\\LaravelStatistics\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ismail Andaloussi",
+            "email": "oneigcy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.2.0"
+    }
+}
