@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('traffics', function (Blueprint $table) {
             $table->id();
             $table->string('ip');
-            $table->string('user');
-            $table->string('user-agent');
+            $table->integer('user_id')->nullable();
+            $table->string('user_agent');
             $table->string('path');
             $table->timestamps();
         });

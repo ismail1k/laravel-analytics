@@ -8,15 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Tracker extends Model
 {
     use HasFactory;
-    
+
     protected $table = "traffics";
     protected $fillable = [
         'ip',
-        'user',
-        'user-agent',
+        'user_id',
+        'user_agent',
         'path',
     ];
     protected $hidden = [
         'updated_by',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

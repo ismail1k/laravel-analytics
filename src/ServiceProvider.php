@@ -3,6 +3,8 @@
 namespace Ismail1k\LaravelStatistics;
 
 use Illuminate\Support\ServiceProvider as Provider;
+use Illuminate\Http\Request;
+use Tracker;
 
 class ServiceProvider extends Provider
 {
@@ -28,6 +30,6 @@ class ServiceProvider extends Provider
      */
     public function boot()
     {
-        //
+        Tracker::log(Request::class);
     }
 }
