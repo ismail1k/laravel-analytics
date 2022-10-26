@@ -7,7 +7,6 @@ class Tracker
 {
 
     public function log($request){
-        //http://ipinfo.io/105.155.157.6/geo
         $traffic = Traffic::create([
             'ip' => '127.0.0.1',
             'user_id' => 1,
