@@ -17,7 +17,7 @@ class TrackerMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        Tracker::log(Request::class);
+        Tracker::log($request);
         return $next($request);
     }
 }

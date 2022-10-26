@@ -8,10 +8,10 @@ class Tracker
 
     public function log($request){
         $traffic = Traffic::create([
-            'ip' => '127.0.0.1',
-            'user_id' => 1,
-            'user_agent' => 1,
-            'path' => '/product',
+            'ip' => $request->ip(),
+            'user_id' => Auth::user()->id??null,
+            'user_agent' => $request->userAgent(),
+            'path' => $request->getPathInfo(),
         ]);
         return $traffic;
     }
