@@ -17,7 +17,7 @@ class Tracker extends Model
         'path',
     ];
     protected $hidden = [
-        'updated_by',
+        'updated_at',
     ];
 
     public function user(){
