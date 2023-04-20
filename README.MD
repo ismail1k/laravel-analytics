@@ -1,4 +1,4 @@
-# laravel-Statistics
+# laravel-Analytics
 A laravel package that can help you to measure traffic on your website!
 
 ## Installation
