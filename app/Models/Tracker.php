@@ -9,7 +9,7 @@ class Tracker extends Model
 {
     use HasFactory;
 
-    protected $table = "traffics";
+    protected $table = "analytics";
     protected $fillable = [
         'ip',
         'path',
