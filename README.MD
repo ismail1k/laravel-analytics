@@ -1,18 +1,18 @@
 # laravel-Statistics
-The package can help you collect statistics about your Laravel application.
+A laravel package that can help you to measure traffic on your website!
 
 ## Installation
 First, install Package to your laravel project with Composer using command bellow:
 ```shell
-composer require "ismail1k/laravel-statistics"
+composer require ismail1k/laravel-analytics
 ```
 then add these follow lines to `config/app.php`:
 ```php
   'providers' => [
-      Ismail1k\LaravelStatistics\ServiceProvider::class,
+      Ismail1k\LaravelAnalytics\ServiceProvider::class,
   ],
   'aliases' => [
-      'Tracker' => Ismail1k\LaravelStatistics\CartServiceProvider::class,
+      'Tracker' => Ismail1k\LaravelAnalytics\CartServiceProvider::class,
   ],
 ```
 
@@ -26,7 +26,7 @@ Now, open `app/Http/kernel.php` and add this line:
 
 Next step, publish some files: 
 ```shell
-php artisan vendor:publish --provider="Ismail1k\LaravelStatistics\ServiceProvider"
+php artisan vendor:publish --provider="Ismail1k\LaravelAnalytics\ServiceProvider"
 ```
 then, run the follow command line:
 ```shell

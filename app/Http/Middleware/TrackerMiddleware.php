@@ -17,7 +17,27 @@ class TrackerMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        Tracker::log($request);
+        $record = Tracker::where('session_id', $request->session()->getId())
+            ->where('path', url()->current())
+            ->first();
+        if($record){
+            $record->update([
+                'ip' => $request->ip(),
+                'views' => $record->views+1,
+            ]);
+            if(Auth::check()) $record->update([
+                'user_id' => Auth::user()->id,
+            ]);
+            return $next($request);
+        }
+        Tracker::create([
+            'ip' => $request->ip(),
+            'path' => url()->current(),
+            'source' => @url()->previous()??null,
+            'session_id' => $request->session()->getId(),
+            'user_id' => Auth::check()?Auth::user()->id:null,
+            'agent' => $request->header('user-agent'),
+        ]);
         return $next($request);
     }
 }

@@ -1,6 +1,6 @@
 <?php 
 
-namespace Ismail1k\LaravelStatistics\Facades;
+namespace Ismail1k\LaravelAnalytics\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

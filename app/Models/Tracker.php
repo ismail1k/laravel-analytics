@@ -12,9 +12,12 @@ class Tracker extends Model
     protected $table = "traffics";
     protected $fillable = [
         'ip',
-        'user_id',
-        'user_agent',
         'path',
+        'source',
+        'session_id',
+        'user_id',
+        'agent',
+        'views',
     ];
     protected $hidden = [
         'updated_at',
