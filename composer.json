@@ -1,11 +1,11 @@
 {
-    "name": "ismail1k/laravel-statistics",
-    "description": "The package can help you collect statistics about your Laravel project.",
+    "name": "ismail1k/laravel-analytics",
+    "description": "A laravel package that can help you to measure traffic on your website!",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Ismail1k\\LaravelStatistics\\": "src/"
+            "Ismail1k\\LaravelAnalytics\\": "src/"
         }
     },
     "authors": [
@@ -17,10 +17,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ismail1k\\LaravelStatistics\\ServiceProvider"
+                "Ismail1k\\LaravelAnalytics\\ServiceProvider"
             ],
             "aliases": {
-                "Tracker": "Ismail1k\\LaravelStatistics\\Facades\\TrackerFacade"
+                "Tracker": "Ismail1k\\LaravelAnalytics\\Facades\\TrackerFacade"
             }
         }
     },
